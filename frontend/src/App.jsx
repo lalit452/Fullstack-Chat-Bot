@@ -26,6 +26,8 @@ function App() {
   };
 
   return (
+    <>
+    <div className="title" >Chatbot</div>
     <div className="chat-container">
       <div className="chat-box">
         {chat.map((msg, index) => (
@@ -45,6 +47,7 @@ function App() {
         <button onClick={sendMessage}>Send</button>
       </div>
     </div>
+    </>
   );
 }
 
