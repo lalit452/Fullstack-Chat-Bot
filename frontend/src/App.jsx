@@ -14,7 +14,7 @@ function App() {
     setMessage(""); // Clear input after sending
 
     try {
-      const res = await axios.post("http://localhost:5000/api/chat", {
+      const res = await axios.post("https://fullstack-chat-bot.vercel.app/api/chat", {
         message: message,
       });
 
