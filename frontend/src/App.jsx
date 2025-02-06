@@ -14,9 +14,13 @@ function App() {
     setMessage(""); // Clear input after sending
 
     try {
+      // const res = await axios.post("https://fullstack-chat-bot.vercel.app/api/chat", {
+      //   message: message,
+      // });
       const res = await axios.post("https://fullstack-chat-bot.vercel.app/api/chat", {
-        message: message,
-      });
+  message: message,
+}, { withCredentials: true });
+
 
       setChat([...newChat, { text: res.data.reply, sender: "bot" }]); // Add bot response
     } catch (error) {
