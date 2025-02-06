@@ -20,12 +20,21 @@ function App() {
 //       const res = await axios.post("https://fullstack-chat-bot.vercel.app/api/chat", {
 //   message: message,
 // }, { withCredentials: true });
-      const res = await axios.post("https://fullstack-chat-bot.vercel.app/api/chat", {
-  message: message,
-}, {
-  headers: { "Content-Type": "application/json" },
-  withCredentials: true // Ensures cookies and authentication
-});
+//       const res = await axios.post("https://fullstack-chat-bot.vercel.app/api/chat", {
+//   message: message,
+// }, {
+//   headers: { "Content-Type": "application/json" },
+//   withCredentials: true // Ensures cookies and authentication
+// });
+
+      const res = await axios.post("https://fullstack-chat-bot.vercel.app/api/chat", 
+  { message: message }, 
+  { 
+    headers: { "Content-Type": "application/json" },
+    withCredentials: true // Important for CORS
+  }
+);
+
 
 
 
