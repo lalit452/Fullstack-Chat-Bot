@@ -10,7 +10,7 @@ app.use(express.json());
 
 // ✅ Allow frontend dynamically (Fixes CORS Issue)
 // const allowedOrigins = [process.env.FRONTEND_URL || "http://localhost:5173"];
-const allowedOrigins = ["https://fullstack-chat-bot-frontend.vercel.app/" || "http://localhost:5173"];
+const allowedOrigins = ["https://fullstack-chat-bot-frontend.vercel.app" || "http://localhost:5173"];
 
 app.use(cors({
   origin: function (origin, callback) {
