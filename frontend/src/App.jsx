@@ -17,9 +17,16 @@ function App() {
       // const res = await axios.post("https://fullstack-chat-bot.vercel.app/api/chat", {
       //   message: message,
       // });
+//       const res = await axios.post("https://fullstack-chat-bot.vercel.app/api/chat", {
+//   message: message,
+// }, { withCredentials: true });
       const res = await axios.post("https://fullstack-chat-bot.vercel.app/api/chat", {
   message: message,
-}, { withCredentials: true });
+}, {
+  headers: { "Content-Type": "application/json" },
+  withCredentials: true // Ensures cookies and authentication
+});
+
 
 
       setChat([...newChat, { text: res.data.reply, sender: "bot" }]); // Add bot response
